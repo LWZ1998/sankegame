@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>贪吃蛇 - 网页版</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="title">贪吃蛇</h1>
+      <div class="scoreboard">
+        <div>分数：<span id="score">0</span></div>
+        <div>最高分：<span id="highScore">0</span></div>
+      </div>
+      <div class="toolbar">
+        <button id="btnToggle" class="btn">开始</button>
+        <button id="btnRestart" class="btn btn-secondary">重开</button>
+        <label class="speed">
+          速度
+          <select id="speedSelect">
+            <option value="6">慢</option>
+            <option value="10" selected>中</option>
+            <option value="14">快</option>
+            <option value="18">超快</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main class="board">
+      <canvas id="game" aria-label="贪吃蛇游戏画布" tabindex="0"></canvas>
+      <div id="hint" class="hint">点击“开始”或按空格开始游戏。方向键/WASD 控制方向，空格暂停，回车重开。移动端可滑动控制方向。</div>
+    </main>
+
+    <footer class="footer">
+      <small>© <span id="year"></span> 贪吃蛇小游戏</small>
+    </footer>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
+
+
